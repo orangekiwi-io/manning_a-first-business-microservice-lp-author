@@ -59,10 +59,13 @@ jobs:
           echo -e "Execution Fail!"
           exit 1
         fi
-        resp=$(curl http://localhost:8001/bob -X POST -d "12345")
+        resp=$(curl -v http://localhost:8001/find_rate -X POST -d "12345" 2>&1)
         echo "$resp"
-        if [[ $resp == "" ]]; then
-          echo -e "Execution Success! 404 Not Found"
+        if [[ $resp == *"404 Not Found"* ]]; then
+          echo -e "Execution Success!"
+        else
+          echo -e "Execution Fail!"
+          exit 1
         fi
         kill -9 `cat wasmedge.pid`
         rm wasmedge.pid
