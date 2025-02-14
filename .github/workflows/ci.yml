@@ -58,7 +58,8 @@ jobs:
         else
           echo -e "Execution Fail!"
           exit 1
-        fi        resp=$(curl http://localhost:8001/bob -X POST -d "12345")
+        fi
+        resp=$(curl http://localhost:8001/bob -X POST -d "12345")
         echo "$resp"
         if [[ $resp == "0.08" ]]; then
           echo -e "Execution Success!"
