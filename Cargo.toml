@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-anyhow = "1.0"
-hyper_wasi = { version = "0.15", features = ["full"]}
-tokio_wasi = { version = "1.21", features = ["rt", "macros", "net", "time", "io-util"]}
-csv = "1.1"
+anyhow = "1.0.95"
+hyper_wasi = { version = "0.15.2", features = ["full"]}
+tokio_wasi = { version = "1.25.2", features = ["rt", "macros", "net", "time", "io-util"]}
+csv = "1.3.1"
