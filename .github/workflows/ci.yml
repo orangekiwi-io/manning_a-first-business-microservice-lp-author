@@ -8,9 +8,9 @@ on:
         required: true
         default: 'info'
   push:
-    branches: [ main ]
+    branches: [ section_3_1 ]
   pull_request:
-    branches: [ main ]
+    branches: [ section_3_1 ]
 
 jobs:
   build:
